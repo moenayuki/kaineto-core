@@ -27,11 +27,11 @@ var raneto = {
 		// Specify the path of your content folder where all your '.md' files are located
 		content_dir: './content/',
 		// Toggle debug logging
-		debug: false
+		debug: false,
+		// Regex for page meta
+		metaRegex: /^\/\*([\s\S]*?)\*\//i
+		// TODO: i18n option for date/time format.
 	},
-
-	// Regex for page meta
-	_metaRegex: /^\/\*([\s\S]*?)\*\//i,
 
 	// Makes filename safe strings
 	cleanString: function(str, use_underscore) {
@@ -52,7 +52,7 @@ var raneto = {
 
 	// Get meta information from Markdown content
 	processMeta: function(markdownContent) {
-		var metaArr = markdownContent.match(raneto._metaRegex),
+		var metaArr = markdownContent.match(raneto.config.metaRegex),
 			meta = {};
 
 		var metaString = metaArr ? metaArr[1].trim() : '';
@@ -71,7 +71,7 @@ var raneto = {
 
 	// Strip meta from Markdown content
 	stripMeta: function(markdownContent) {
-		return markdownContent.replace(raneto._metaRegex, '').trim();
+		return markdownContent.replace(raneto.config.metaRegex, '').trim();
 	},
 
 	// Replace content variables in Markdown content
@@ -198,6 +198,7 @@ var raneto = {
 	},
 
 	// Index and search contents
+	// TODO: change search engine
 	doSearch: function(query) {
 		var files = glob.sync(raneto.config.content_dir +'**/*.md');
 		var idx = lunr(function(){

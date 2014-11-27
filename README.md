@@ -9,7 +9,7 @@ Here are my TODOs:
      > Seems like `lunr.js` doesn't work when given a Chinese keyword.
 
  * [ ] i18n for date/time format.
- * [ ] A customizable page-meta identifier.
+ * [x] A customizable page-meta identifier.
  * [ ] Support some superset syntax of markdown.
 
      > I like `kramdown`, but it is written in Ruby. :(

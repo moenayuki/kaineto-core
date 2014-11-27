@@ -138,3 +138,20 @@ describe('#doSearch()', function() {
         expect(result).to.be.empty;
     });
 });
+
+describe("kaineto#processMeta()", function () {
+    it('returns array of meta values with a customized identifier', function() {
+        raneto.config.metaRegex = /^-{3,}([\s\S]*?)-{3,}/i;
+        var result = raneto.processMeta('-------\n'+
+        'Title: This is a title\n'+
+        'Description: This is a description\n'+
+        'Sort: 4\n'+
+        'Multi word: Value\n'+
+        '-------\n');
+        expect(result).to.have.property('title', 'This is a title');
+        expect(result).to.have.property('description', 'This is a description');
+        expect(result).to.have.property('sort', '4');
+        expect(result).to.have.property('multi_word', 'Value');
+        raneto.config.metaRegex = /^\/\*([\s\S]*?)\*\//i;
+    });
+});
