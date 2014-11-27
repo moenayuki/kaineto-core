@@ -1,15 +1,19 @@
 #Kaineto-core : 改・raneto-core
 
-I want to modify (raneto-core)[https://github.com/gilbitron/Raneto-Core] to meet my demands.
+I want to modify [raneto-core](https://github.com/gilbitron/Raneto-Core) to meet my demands.
 
 Here are my TODOs:
 
  * [ ] Search with CJK characters.
+
      > Seems like `lunr.js` doesn't work when given a Chinese keyword.
+
  * [ ] i18n for date/time format.
  * [ ] A customizable page-meta identifier.
  * [ ] Support some superset syntax of markdown.
+
      > I like `kramdown`, but it is written in Ruby. :(
+
  * [ ] etc...
 
 
