@@ -1,7 +1,7 @@
 #Kaineto-core : 改・raneto-core
 
 [![Build Status](https://travis-ci.org/moenayuki/kaineto-core.svg)](https://travis-ci.org/moenayuki/kaineto-core)
-[![Coverage Status](https://coveralls.io/repos/moenayuki/kaineto-core/badge.png)](https://coveralls.io/r/moenayuki/kaineto-core)
+[![Coverage Status](https://coveralls.io/repos/moenayuki/kaineto-core/badge.png?branch=master)](https://coveralls.io/r/moenayuki/kaineto-core?branch=master)
 
 I want to modify [raneto-core](https://github.com/gilbitron/Raneto-Core) to meet my demands.
 
