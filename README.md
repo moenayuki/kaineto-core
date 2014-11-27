@@ -1,5 +1,8 @@
 #Kaineto-core : 改・raneto-core
 
+[![Build Status](https://travis-ci.org/moenayuki/kaineto-core.svg)](https://travis-ci.org/moenayuki/kaineto-core)
+[![Coverage Status](https://coveralls.io/repos/moenayuki/kaineto-core/badge.png)](https://coveralls.io/r/moenayuki/kaineto-core)
+
 I want to modify [raneto-core](https://github.com/gilbitron/Raneto-Core) to meet my demands.
 
 Here are my TODOs:
@@ -9,7 +12,7 @@ Here are my TODOs:
      > Seems like `lunr.js` doesn't work when given a Chinese keyword.
 
  * [ ] i18n for date/time format.
- * [x] A customizable page-meta identifier.
+ * [x] [A customizable page-meta identifier.](https://github.com/moenayuki/kaineto-core/wiki/Customize-metaReg)
  * [ ] Support some superset syntax of markdown.
 
      > I like `kramdown`, but it is written in Ruby. :(
